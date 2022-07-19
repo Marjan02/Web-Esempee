@@ -1,0 +1,57 @@
+.bagian1 {
+    padding: 50px;
+    display: flex;
+    background-color: white;
+}
+.bag-kiri {
+    width: 60%;
+    text-align: justify;
+    border-right: 1px solid gray;
+    padding-right: 20px;
+}
+.bag-kiri h3 {
+    color: rgb(0, 70, 0);
+}
+.bag-kanan {
+    width: 35%;
+    text-align: justify;
+    padding-left: 20px;
+    font-style: italic;
+    color: gray;
+}
+.bag-kanan img{
+    margin-bottom: 5px;
+    border: 3px solid rgba(0, 0, 0, 0.404);
+}
+.hrhe {
+    margin: 10px 0;
+}
+.hey a:visited {
+    color:rgb(0, 70, 0);
+}
+div.gallery {
+    margin-top: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+@media (max-width: 700px){
+    div.gambar {
+        margin-top: 70px;
+    }
+    .bagian1 {
+        display: block;
+        padding: 20px 10px;
+    }
+    .bag-kiri {
+        border: none;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .bag-kiri table {
+        font-size: 13px;
+    }
+    .bag-kanan {
+        width: 100%;
+    }
+}

@@ -1,0 +1,915 @@
+.tombol svg {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px -1px black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.list-jurusan {
+    display: none;
+}
+/* topnav buat mobile */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-image: linear-gradient(
+        rgb(255, 255, 255), 
+        white
+    );
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid rgb(155, 155, 155);
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav img {
+      width: 20px;
+      transform: scale(2);
+  }
+  
+  /* Add an active class to highlight the current page */
+  .active {
+    background-color: #04AA6D;
+    color: black;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  
+  /* Dropdown container - needed to position the dropdown content */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Style the dropdown button to fit inside the topnav */
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 19px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-left: 5px solid blue;
+  }
+  
+  /* Add a dark background on topnav links and the dropdown button on hover */
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    color: black;
+  }
+  
+  /* Add a grey background to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 1000px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 1000px) {
+    .topnav.responsive {position: fixed;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+/* end topnav */
+/* dropdown btn */
+.dropdown-btn {
+    padding: 5% 10%;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .dropdown-btn:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      font-weight: bold;
+      color: black;
+  }
+  .active {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: bold;
+  }
+  .dropdown-container.one {
+    display: none;
+    background-color: #000000cc;
+    position: absolute;
+    left: 100%;
+    top: 54.5%;
+    width: 280px;
+  }.dropdown-container.two {
+    display: none;
+    background-color: #000000cc;
+    position: absolute;
+    left: 100%;
+    top: 42.5%;
+    width: 250px;
+  }
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+/* end dropdown btn */
+.clear {
+    clear: both;
+}
+
+.sidenav {
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.548);
+    z-index: 9999;
+}
+.sidenav img {
+    margin: 10% 18%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.sidenav h1 {
+    color: white;
+    font-size: 25px;
+    margin: -10% 0% 10% 13%;
+}
+.sidenav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5% 10%;
+    text-align: left;
+}
+.sidenav a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-weight: bold;
+}
+
+/* main home */
+.main {
+    margin-left: 320px;
+    margin-right: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home {
+    padding: 320px 0;
+}
+.logo-responsive {
+    display: none;
+}
+.main.home h1 {
+    color: white;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 0 1px black, 0 0 2px black, 0 0 3px black, 0 0 4px black;
+}
+.main.home span {
+    color: rgb(22, 22, 189);
+    text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px white;
+}
+/* end main home */
+
+/* main sejarah */
+.sejarah {
+    background-color: rgba(255, 255, 255, 1);
+    color: white;
+    padding: 1.5% 2%;
+    margin-top: -1%;
+    position: relative;
+    top: 300px;
+}
+.foto-sejarah {
+    height: 300px;
+    background-image: url(img/sejarah2.jpg);
+    width: 74.3%;
+    margin-left: 320px;
+    background-position-y: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+}
+.sejarah h2 {
+    margin-bottom: 0;
+    color: black;
+}
+.sejarah span {
+    font-weight: bold;
+}
+.sejarah p {
+    line-height: 25px;
+    color: black;
+    font-size: 18px;
+    text-align: justify;
+}
+.sejarah ul {
+    padding-inline-start: 18px;
+}
+.sejarah ul li {
+    padding-bottom: 5px;
+    line-height: 25px;
+    color: black;
+    font-size: 18px;
+}
+/* end main sejarah */
+
+/* matrikulasi */
+.matrikulasi {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 1% 2%;
+    position: relative;
+    top: 300px;
+}
+.foto-matrikulasi {
+    height: 300px;
+    background-image: url(img/matrikulasi1.JPG);
+    width: 74.3%;
+    margin-left: 320px;
+    background-position-y: -120px;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+}
+.matrikulasi h2 {
+    margin-bottom: 0;
+    color: black;
+}
+.matrikulasi p {
+    line-height: 25px;
+    color: black;
+    font-size: 18px;
+    text-align: justify;
+}
+.matrikulasi .matrikulasi-img img {
+    float: right;
+    width: 35%;
+    margin-left: 2%;
+    border-radius: .5em/2em;
+}
+/* end matrikulasi */
+
+/* kantin */
+.kantin {
+    background-color: rgba(255, 255, 255, 1);
+    color: white;
+    padding: 1% 2%;
+    position: relative;
+    top: 300px;
+}
+.foto-kantin {
+    height: 300px;
+    background-image: url(img/kantin1.jpg);
+    width: 74.3%;
+    margin-left: 320px;
+    background-position-y: -200px;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+}
+.kantin h2 {
+    margin-bottom: 0;
+    color: black;
+}
+.kantin .kantin-img img {
+    float: right;
+    width: 35%;
+    margin-left: 2%;
+    border-radius: .5em/2em;
+}
+.kantin p {
+    line-height: 25px;
+    color: black;
+    font-size: 18px;
+    text-align: justify;
+}
+/* end kantin */
+
+/* perpus */
+.perpus {
+    background-color: rgba(255, 255, 255, 1);
+    color: white;
+    padding: 1% 2%;
+    position: relative;
+    top: 300px;
+}
+.foto-perpus {
+    height: 300px;
+    background-image: url(img/perpus8.jpg);
+    width: 74.3%;
+    margin-left: 320px;
+    background-position-y: -100px;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+}
+.perpus h2 {
+    margin-bottom: 0;
+    color: black;
+}
+.perpus p {
+    line-height: 25px;
+    color: black;
+    font-size: 18px;
+}
+.perpus ul {
+    padding-inline-start: 18px;
+}
+.perpus li {
+    line-height: 25px;
+    color: black;
+    font-size: 18px;
+}
+.perpus-img {
+    display: flex;
+    flex-wrap: wrap;
+}
+.perpus-img img {
+    width: 48%;
+    margin: 1%;
+}
+.perpus span {
+    font-size: 20px;
+    font-weight: bold;
+}
+.perpus a {
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
+    font-size: 18px;
+}
+.perpus a:hover {
+    text-decoration: underline;
+}
+/* end perpus */
+
+/* jurusan */
+
+/* Rpl */
+.foto-rpl {
+    height: 300px;
+    background-image: url(img/jurusan-rpl1.JPG);
+    width: 100%;
+    background-position-y: -120px;
+    background-size: cover;
+}
+.tentang-rpl {
+    background-color: white;
+    padding: 1% 2%;
+}
+.tentang-rpl p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 25px;
+}
+.tentang-rpl li {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+.tentang-rpl span {
+    font-weight: bold;
+}
+.rpl-img {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-top: 5px double rgb(73, 73, 73);
+    border-bottom: 5px double rgb(73, 73, 73);
+}
+.img-jurusanrpl1, .img-jurusanrpl2, .img-jurusanrpl3,
+.img-jurusanrpl4, .img-jurusanrpl5, .img-jurusanrpl6, 
+.img-jurusanrpl7 {
+    width: 48%;
+    margin: .5%;
+    overflow: hidden;
+}
+.rpl-img img {
+    width: 100%;
+    border: 1px solid gray;
+    transition: .3s;
+}
+.img-jurusanrpl1:hover img, 
+.img-jurusanrpl2:hover img, 
+.img-jurusanrpl3:hover img, 
+.img-jurusanrpl4:hover img, 
+.img-jurusanrpl5:hover img, 
+.img-jurusanrpl6:hover img, 
+.img-jurusanrpl7:hover img {
+    transform: scale(1.1);
+    transition: .5s;
+}
+/* end RPL */
+
+/* otkp */
+.foto-otkp {
+    height: 300px;
+    background-image: url(img/jurusan-otkp.jpg);
+    width: 100%;
+    background-position-y: -120px;
+    background-size: cover;
+}
+.tentang-otkp {
+    background-color: white;
+    padding: 3% 2%;
+}
+.tentang-otkp h2 {
+    margin: 0;
+}
+.tentang-otkp p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 25px;
+}
+.tentang-otkp li {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+.tentang-otkp span {
+    font-weight: bold;
+}
+.otkp-img {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-top: 5px double rgb(73, 73, 73);
+    border-bottom: 5px double rgb(73, 73, 73);
+}
+.img-otkp1, .img-otkp2, .img-otkp3, .img-otkp4 {
+    width: 48%;
+    margin: .5%;
+    overflow: hidden;
+}
+.otkp-img img {
+    width: 100%;
+    border: 1px solid gray;
+    transition: .3s;
+}
+.img-otkp1:hover img, 
+.img-otkp2:hover img, 
+.img-otkp3:hover img, 
+.img-otkp4:hover img {
+    transform: scale(1.1);
+    transition: .5s;
+}
+/* end otkp */
+.tentang-tkj p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 25px;
+}
+.tentang-tkj li {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+.tentang-tkj span {
+    font-weight: bold;
+}
+
+/* tkj */
+.foto-tkj {
+    height: 300px;
+    background-image: url(img/jurusan-tkj.jpg);
+    width: 100%;
+    background-position-y: -190px;
+    background-size: cover;
+}
+.tentang-tkj {
+    background-color: white;
+    padding: 3% 2%;
+}
+
+.tentang-tkj h2 {
+    margin: 0;
+}
+.tkj-img {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-top: 5px double rgb(73, 73, 73);
+    border-bottom: 5px double rgb(73, 73, 73);
+}
+.img-tkj, .img-tkj1, .img-tkj2, .img-tkj3, .img-tkj4, 
+.img-tkj5, .img-tkj6, .img-tkj7 {
+    width: 48%;
+    margin: .5%;
+    overflow: hidden;
+}
+.tkj-img img {
+    width: 100%;
+    border: 1px solid gray;
+    transition: .3s;
+}
+.img-tkj:hover img,
+.img-tkj1:hover img, 
+.img-tkj2:hover img, 
+.img-tkj3:hover img, 
+.img-tkj4:hover img,
+.img-tkj5:hover img, 
+.img-tkj6:hover img, 
+.img-tkj7:hover img {
+    transform: scale(1.1);
+    transition: .5s;
+}
+/* end tkj */
+
+/* end jurusan */
+/* contact */
+.contact {
+    width: 100%;
+}
+.contact h2, .contact p {
+    color: white;
+    text-align: center;
+}
+.pesan {
+    background-color: rgba(255, 255, 255, 1);
+    height: 500px;
+    padding-top: 2%;
+    margin-right: 2%;
+}
+.pesan h2, .pesan p {
+    color: rgb(0, 0, 0);
+}
+/* contact2 */
+.contact2 {
+    background-image: linear-gradient(
+        750deg, 
+        rgb(11, 102, 11),
+        rgb(9, 143, 9),
+        rgb(11, 105, 27)
+    );
+    color: white;
+    padding: 20px 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+    position: relative;
+}
+.contact-info {
+    width: 45%;
+    float: left;
+}
+.contact-info a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.contact-info a:hover {
+    color: lightblue;
+}
+.contact-info .contact-wk1 {
+    display: none;
+}
+.contact-info p {
+    margin: 0;
+    padding-top: 5px;
+}
+.contact-info svg {
+    float: left;
+    margin-right: 20px;
+}
+
+/* socialmedia */
+.socialmedia {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+}
+.socialmedia a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.socialmedia a:hover {
+    color: lightblue;
+}
+.socialmedia p {
+    margin: 0;
+    padding-top: 5px;
+}
+.socialmedia .contact-wk1 {
+    display: none;
+}
+.socialmedia svg {
+    float: left;
+    margin-right: 20px;
+}
+
+/* contact info smk wikrama */
+.contact-wk {
+    width: 100%;
+}
+.contact-wk .contact-wk1 {
+    display: none;
+}
+.contact-wk  a {
+    text-decoration: none;
+    color: white;
+}
+.contact-wk a:hover {
+    color: lightblue;
+}
+.contact-wk svg {
+    float: left;
+    margin-right: 20px;
+}
+.contact-wk p {
+    margin: 0;
+    padding-top: 5px;
+}
+.contact-info-wk {
+    width: 45%;
+    float: left;
+}
+
+.social-media-wk {
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+    /* list jurusan */
+    .list-jurusan {
+        background-color: white;
+        padding: 20px;
+        padding-top: 50px;
+        display: block;
+    }
+    .list-jurusan a {
+        color: black;
+    }
+    .list-jurusan ul li {
+        margin-bottom: 10px;
+    }
+    /* end list jurusan */
+    .topnav {
+        display: block;
+    }
+    .sidenav {
+        display: none;
+    }
+    .home {
+        height: 400px;
+    }
+    .logo-responsive {
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-around;
+        margin-top: -250px;
+    }
+    .main.home h1 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 380px;
+    }
+    .main {
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    .sejarah p, .sejarah ul li, .matrikulasi p, 
+    .kantin p, .perpus p, .perpus li, .perpus a, 
+    .tentang-rpl p, .tentang-rpl ol li, .tentang-otkp p, 
+    .tentang-otkp ol li, .tentang-tkj p, .tentang-tkj ol li {
+        font-size: 14px;
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .sejarah, .matrikulasi, .kantin, .perpus {
+        padding-bottom: 20px;
+    }
+    .sejarah ul {
+        padding-inline-start: 30px;
+    }
+    ol {
+        padding-inline-start: 30px;
+    }
+    .sejarah h2, .matrikulasi h2, .kantin h2, .perpus h2, 
+    .tentang-rpl h2, .tentang-otkp h2, .tentang-tkj h2 {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .matrikulasi .matrikulasi-img img {
+        width: 300px;
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+    .kantin .kantin-img img {
+        width: 300px;
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+
+    /* new */
+    .foto img, .foto-sejarah,  .foto-kantin, .foto-matrikulasi {
+        margin-left: 0;
+        width: 100%;
+        background-position-y: 0;
+        background-position-x: -50px;
+    }
+    .foto-perpus {
+        margin-left: 0;
+        width: 100%;
+        background-position-y: 0;
+        background-position-x: 0;
+    }
+    .foto-rpl {
+        background-position-y: 0;
+    }
+    .foto-otkp {
+        margin-top: 50px;
+        background-position-y: 0;
+        background-position-x: -100px;
+    }
+    .foto-tkj {
+        margin-top: 50px;
+        background-position-y: 0;
+    }
+    /* contact */
+    .contact {
+        width: 100%;
+    }
+    .twbr {
+        display: none;
+    }
+    .pesan {
+        background-color: rgba(255, 255, 255, 1);
+        height: 750px;
+        margin: 50px 0 0 0;
+    }
+    .contact h2 {
+        margin-top: 0;
+        padding-top: 5%;
+    }
+    /* end contact */
+    /* contact2 */
+    .contact2 {
+        padding: 5%;
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: -18px;
+    }
+    .contact-info {
+        float: none;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .contact-info h3 {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .contact-info hr {
+        display: none;
+    }
+    .contact-info .contact-wk1, .socialmedia .contact-wk1 {
+        display: block;
+    }
+    .contact-info svg, .contact-info p {
+        margin-top: 5%;
+    }
+    .socialmedia {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .socialmedia h3 {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .socialmedia hr {
+        display: none;
+    }
+    .socialmedia svg, .socialmedia p {
+        margin-top: 5%;
+    }
+    .contact-wk h3 {
+        text-align: center;
+    }
+    .contact-wk .contact-wk1 {
+        display: block;
+    }
+    .contact-info-wk {
+        width: 100%;
+    }
+    .contact-info-wk hr {
+        display: none;
+    }
+    .contact-info-wk svg, .contact-info-wk p {
+        margin-top: 5%;
+    }
+    .social-media-wk {
+        width: 100%;
+        margin-left: 0;
+    }
+    .social-media-wk hr {
+        display: none;
+    }
+    .social-media-wk svg, .social-media-wk p {
+        margin-top: 5%;
+    }
+    /* end contact2 */
+    /* footer */
+    footer {
+        padding: 5px 5px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    footer p {
+        font-size: 11px;
+        text-align: center;
+    }
+    /* end new */
+}
+/* end responsive */
